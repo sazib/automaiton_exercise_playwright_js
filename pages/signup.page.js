@@ -12,7 +12,6 @@ class SignupPage {
                          password='', date_of_birth='', firstName='', lastName='', address='Test Address',
                                country='India', state='Kerala', city='Pune', zipcode='2000', mobile='01998799977'}) {
         await this.page.getByLabel(title).check();
-        // await this.page.getByRole('textbox', { name: 'Name *', exact: true }).fill(name);
         await this.page.getByRole('textbox', { name: 'Password *' }).fill(password);
         await this.page.locator('#days').selectOption({label: date_of_birth});
         await this.page.getByRole('textbox', { name: 'First name *' }).fill(firstName);
@@ -27,4 +26,4 @@ class SignupPage {
     }
 }
 
-module.exports = {SignupPage};
+export {SignupPage};
