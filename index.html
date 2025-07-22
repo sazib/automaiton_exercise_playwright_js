@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="current-time" data-testid="current-time"></div>
+<script>
+  const renderTime = () => {
+    document.getElementById('current-time').textContent =
+        new Date().toLocaleString();
+  };
+  setInterval(renderTime, 1000);
+</script>
+
+</body>
+</html>
